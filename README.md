@@ -1,32 +1,119 @@
+# ⚾ MLB SQL Analytics Pipeline
+
+An end-to-end SQL analytics project built on 60,000+ Major League Baseball (MLB) records to answer real-world analytical questions related to player performance, salaries, schools, and career progression.  
+This project demonstrates SQL-based data modeling, analytical transformations, and performance-optimized querying.
+
+---
+
+## 🎯 Project Goals
+
+This project simulates how a Data Engineer or Analytics Engineer would build curated analytical datasets for downstream reporting teams.  
+The objectives include:
+
+- Identifying schools that produce the most MLB players  
+- Analyzing salary trends across teams and decades  
+- Understanding player career longevity and progression  
+- Studying physical attributes (height, weight, handedness)  
+- Creating reusable SQL transformations for BI consumption  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Database:** SQL Server  
+- **SQL Concepts:** Joins, CTEs, Window Functions, Aggregations, Subqueries  
+- **Data Modeling:** Star-schema style analytical tables  
+- **Output:** CSV exports for dashboards and reporting  
+
+---
+
+## 🧱 Data Model (Simplified ERD)
+Players ─────────┐ ├── Salaries Schools ──────────┘
+
+- **Players:** Player attributes, demographics, handedness  
+- **Schools:** College attended  
+- **Salaries:** Salary by year, team, and league  
+
+This structure supports analytical queries across multiple dimensions.
+
+---
+
+## 🔄 Pipeline Workflow
+Raw Data → Staging Tables → Cleaned Tables → Analytical Views → Insights/Exports
 
 
-#  MLB SQL Data Analysis Project  
+### **1. Raw Data**
+Imported CSV files into SQL Server.
 
-## 📌 Project Overview  
-This project explores **Major League Baseball (MLB)** data using SQL Server to answer real-world analytical questions.  
-The dataset includes information about players, schools, salaries, and career details.  
+### **2. Staging**
+Basic cleaning:
+- Standardized column names  
+- Removed nulls and duplicates  
+- Normalized school names  
 
-The goal of this project is to practice **data analysis with SQL** and uncover insights that could be useful for sports analysts, management teams, or even fans.  
+### **3. Cleaned Tables**
+Applied transformations:
+- Derived metrics (BMI, career length, etc.)  
+- Standardized date formats  
+- Mapped players to schools and salary history  
 
+### **4. Analytical Views**
+Created SQL views for:
+- Top schools producing MLB players  
+- Salary trends by decade  
+- Longest-serving players  
+- Attribute distributions  
 
-## 🎯 Business Objectives  
-This project is structured around four key objectives:  
+### **5. Exports**
+Final datasets exported as CSV for BI tools.
 
-1. **Schools** – Identify schools that produced the most MLB players and analyze their trends.  
-2. **Salaries** – Explore team and player salaries across different years.  
-3. **Career Path** – Analyze player career journeys and longest-serving players.  
-4. **Attributes** – Study physical attributes such as height, weight, and handedness.  
-
-
-## 🛠️ **Tools & Skills Used**
-1. **Database:** SQL Server
-2. **SQL Concepts:** Joins, CTEs, Aggregations, Window Functions
-3. **Data Export:** CSV outputs for result storage
-
+---
 
 ## 📊 Key Insights
-USC and Arizona State University are the top schools producing MLB players.
-Player salaries show a sharp increase post-1980s, reflecting commercialization.
-Some players maintained careers spanning 20+ years, showing long-term consistency.
-Average player height and weight have increased across decades.
-Right-handed players dominate, but left-handed pitchers are highly valued.
+
+- **Top Schools:** USC and Arizona State University produced the highest number of MLB players  
+- **Salary Trends:** Sharp salary growth post-1980s due to commercialization  
+- **Career Longevity:** Several players maintained careers spanning 20+ years  
+- **Physical Attributes:** Average height and weight increased over decades  
+- **Handedness:** Right-handed players dominate, but left-handed pitchers remain highly valued  
+
+---
+
+## 📁 Repository Structure
+/sql ├── staging_queries.sql ├── cleaned_tables.sql ├── analytical_views.sql └── insights_queries.sql
+/data └── raw_csv_files
+/exports └── final_datasets.csv
+
+---
+
+## 🚀 How to Run This Project
+
+1. Clone the repository  
+2. Import raw CSV files into SQL Server  
+3. Run staging scripts  
+4. Run cleaned table scripts  
+5. Run analytical view scripts  
+6. Query the views or export results  
+
+---
+
+## 📌 Purpose of This Project
+
+This project demonstrates how SQL can be used to:
+
+- Build analytical datasets  
+- Model relationships between entities  
+- Optimize queries for reporting  
+- Extract insights for sports analytics teams  
+
+It reflects the type of work done by **Data Engineers, Analytics Engineers, and SQL Developers** in real organizations.
+
+---
+
+## 🔗 Repository Link
+
+All SQL scripts and documentation are available here:  
+👉 *Add your repo link here if needed*
+
+
+
