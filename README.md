@@ -105,7 +105,6 @@ This project demonstrates how SQL can be used to:
 - Optimize queries for reporting  
 - Extract insights for sports analytics teams  
 
-It reflects the type of work done by **Data Engineers, Analytics Engineers, and SQL Developers** in real organizations.
 
 ---
 
