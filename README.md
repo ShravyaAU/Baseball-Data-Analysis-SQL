@@ -80,9 +80,8 @@ Final datasets exported as CSV for BI tools.
 ---
 
 ## 📁 Repository Structure
-/sql ├── staging_queries.sql ├── cleaned_tables.sql ├── analytical_views.sql └── insights_queries.sql
-/data └── raw_csv_files
-/exports └── final_datasets.csv
+MLB ANALYSIS │ ├── Queries │     ├── player career analysis │     ├── player comparison analysis │     ├── salary analysis │     └── school analysis │ ├── results │     ├── player career analysis │     ├── player comparison analysis │     ├── salary analysis │     └── school analysis │ └── README.md
+
 
 ---
 
